@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+  .icon-collapsed {
+    width: 25px;
+    height: 30px;
+    display: inline-block;
+    box-shadow: 0px 0px 2px #888888;
+  }
+
+  .icon-no-collapsed {
+    width: 25px;
+    height: 30px;
+    display: inline-block;
+    box-shadow: 0px 0px 2px #888888;
+  }
+
+  .collapsed {
+    width: 500px;
+    height: 30px;
+    box-shadow: 0px 3px 10px #888888;
+  }
+
+  .no-collapsed {
+    width: 500px;
+    height: 250px;
+    display: none;
+    box-shadow: 0px 3px 10px #888888;
+}
+</style>
+<script/>
+  $(document).ready(function() {
+    $(".icon-collapsed").click(function() {
+      $(this).parent().hide("slow", function() {});
+      $(this).parent().next().show("slow", function() {});
+    });
+
+    $(".icon-no-collapsed").click(function() {
+      $(this).parent().hide("slow", function() {});
+      $(this).parent().prev().show("slow", function() {});
+    });
+  });
+</script>
+</head>
+<body>
+  <div class="collapsed">
+  <div class="icon-collapsed"> &#10097; </div>
+  <article style="display: inline-block;">
+    Google Chrome
+  </article>
+  </div>
+  <div class="no-collapsed">
+  <div class="icon-no-collapsed">&#10096;</div>
+  <article>
+    <h1>Google Chrome</h1>
+    <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+  </article>
+  </div>
+
+  <div class="collapsed">
+  <div class="icon-collapsed">&#10097;</div>
+  <article style="display: inline-block;">
+    Google Chrome
+  </article>
+  </div>
+  <div class="no-collapsed">
+  <div class="icon-no-collapsed">&#10096;</div>
+  <article>
+    <h1>Google Chrome</h1>
+    <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+  </article>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
